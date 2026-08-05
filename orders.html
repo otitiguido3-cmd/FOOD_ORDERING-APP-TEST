@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tray</title>
+    <link rel="stylesheet" href="tray.css">
+    <link rel="stylesheet" href="order.css">
+
+
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="toggle-menu">
+           <a href="tray.html"><img src="images/back.png" alt="Back"></a> 
+        </div>
+        <div class="smart-food">
+            <h3>CONFIRM ORDER</h3>
+        </div>
+        <div class="notification" aria-label="Notifications">
+            <img src="images/notification.png" alt="Notification">
+        </div>
+       
+    </header>
+    
+    <!-- STRUCTURING THE  MAIN CONTENT -->
+    <section class="free-delivery">
+        <div class="free-delivery-content">
+            <div class="deliver-now">
+                <h4>Your Order</h4><br>
+            </div>
+            <div class="order-empty-state">
+                <div class="empty-state-content">
+                    <img class="empty-order" src="images/no order.png" alt="">
+                    <p>No Order Yet 🍽️ .</p>
+                </div>
+                <div class="order-items-list"></div>
+            </div>
+
+        </div>
+        
+    </section>
+
+    <div class="tray-page-content tray-disabled">
+        <div class="tray-actions">
+            <div class="selection-box">
+                
+                <div class="dine-in">
+                   <h4>Dine In</h4>
+                   <p>Eat at the restaurant</p>
+                </div>
+                <div class="delivery">
+                    <h4>Delivery</h4>
+                    <p>Get your order delivered</p>
+                </div>
+            </div>
+
+            <div class="table-number-box">
+                <label for="table-number">Table Number:</label>
+                <select type="text" id="table-number" name="table-number" placeholder="Enter table number" required>
+                    <option value="">Select a table</option>
+                    <option value="1">Table 1</option>
+                    <option value="2">Table 2</option>
+                    <option value="3">Table 3</option>
+                </select>
+            </div>
+
+            <section class="calculation">
+                <div class="calculation-content">
+                    <div class="sub-total">Subtotal:</div>
+                    <div class="fee" name="fee">Ugx: 0</div>
+                </div>
+                <div class="calculation-content">
+                    <div class="sub-total">Delivery Fee:</div>
+                    <div class="fee" name="fee">Ugx: 0</div>
+                </div>
+                <div class="calculation-content">
+                    <div class="sub-total">Service Fee:</div>
+                    <div class="fee" name="fee">Ugx: 0</div>
+                </div>
+                <hr>
+                <br>
+                <div class="calculation-content">
+                    <div class="sub-total">Total:</div>
+                    <div class="fee" name="fee">Ugx: 0</div>
+                </div>
+
+                
+
+            </section>
+            <div class="special-instruction">
+                    <h4 >Special Instructions (optional)</h4>
+                    <textarea id="special-instruction-textarea" name="special-instruction" placeholder="Eg. No onions, extra sauce, ring the bell on arrival..."></textarea>
+            </div>
+
+            <div class="estimated-delivery-time">
+                <label for="estimated-delivery-time">Estimated preparation time: 20-30 minutes</label>
+
+            </div>
+
+            <section class="place-order">
+                <button id="place-order-button" class="checkout" disabled>Place Order</button>
+                <a href="#" ><img class="checkout-img" src="images/forward.png" alt="Forward"> </a>
+            </section>
+        </div>
+    </div>
+    
+    
+     <!-- STRUCTURING THE FOOTER -->
+   
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="images/home.png" alt="Home"> <br> Home</a></li>
+                <li><a href="menu.html"><img src="images/menu.png" alt="Menu"> <br> Menu</a></li>
+                <li><a href="tray.html"><img src="images/tray.png" alt="Tray"> <br> Tray</a></li>
+                <li><a href="orders.html"><img src="images/orders.png" alt="Orders"> <br> Orders</a></li>
+                <li><a href="#"><img src="images/profile.png" alt="Profile"> <br> Profile</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <div class="side-menu-backdrop" id="side-menu-backdrop"></div>
+    <div id="tray-toast" class="tray-toast" role="status" aria-live="polite"></div>
+    <script src="main.js"></script>
+    <script src="order.js"></script>
+</body>
+</html>

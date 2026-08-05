@@ -5,6 +5,7 @@ const backdrop = document.querySelector('.side-menu-backdrop');
 const panelLinks = document.querySelectorAll('.side-menu-panel a');
 const trayPageContent = document.querySelector('.tray-page-content');
 const TRAY_STORAGE_KEY = 'smart-food-tray';
+const DELIVERY_TYPE_STORAGE_KEY = 'smart-food-delivery-type';
 const DELIVERY_FEE = 5000;
 const SERVICE_FEE = 2000;
 
@@ -19,6 +20,16 @@ function getTrayItems() {
 
 function saveTrayItems(items) {
     localStorage.setItem(TRAY_STORAGE_KEY, JSON.stringify(items));
+}
+
+function getDeliveryType() {
+    return localStorage.getItem(DELIVERY_TYPE_STORAGE_KEY) || 'delivery';
+}
+
+function saveDeliveryType(type) {
+    if (type === 'dine-in' || type === 'delivery') {
+        localStorage.setItem(DELIVERY_TYPE_STORAGE_KEY, type);
+    }
 }
 
 function showTrayFeedback(message) {
@@ -46,7 +57,8 @@ function showTrayFeedback(message) {
 function updateTraySummary() {
     const trayItems = getTrayItems();
     const subtotal = trayItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    const deliveryFee = trayItems.length ? DELIVERY_FEE : 0;
+    const deliveryType = getDeliveryType();
+    const deliveryFee = trayItems.length && deliveryType === 'delivery' ? DELIVERY_FEE : 0;
     const serviceFee = trayItems.length ? SERVICE_FEE : 0;
     const total = subtotal + deliveryFee + serviceFee;
     const totalQuantity = trayItems.reduce((sum, item) => sum + item.quantity, 0);

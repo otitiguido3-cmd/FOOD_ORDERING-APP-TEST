@@ -77,6 +77,22 @@ img {
 
 .deliver-now h4 {
     padding-top: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.deliver-now img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+
+.deliver-now p {
+    margin: 0;
+    font-size: 0.84rem;
+    color: #4f7d6c;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
 }
 
 .free-delivery .delivery-text h4 {
@@ -90,6 +106,7 @@ img {
     margin: 0;
     font-size: 0.84rem;
     color: #4f7d6c;
+    
 }
 
 .free-delivery .delivery-badge {
@@ -178,7 +195,8 @@ img {
     color: #2c2c2c;
     border: 1px solid rgba(44, 44, 44, 0.25);
     border-radius: 999px;
-    font-size: 0.88rem;
+    width: 28px;
+    font-size: 0.99rem;
     font-weight: 700;
     cursor: pointer;
 }
