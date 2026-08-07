@@ -5,6 +5,58 @@ const backdrop = document.querySelector('.side-menu-backdrop');
 const panelLinks = document.querySelectorAll('.side-menu-panel a');
 const trayPageContent = document.querySelector('.tray-page-content');
 const TRAY_STORAGE_KEY = 'smart-food-tray';
+
+// Initialize the shared slide-in navigation menu for all app pages
+function initializeIndexMenu() {
+    const headerToggle = document.querySelector('.toggle-menu');
+    const panel = document.getElementById('page-side-menu') || document.getElementById('home-side-menu');
+    const menuBackdrop = document.getElementById('page-side-backdrop') || document.getElementById('home-side-backdrop');
+
+    if (!headerToggle || !panel || !menuBackdrop) {
+        return;
+    }
+
+    // Open the navigation panel and dim the page content behind it
+    const openMenu = () => {
+        panel.classList.add('open');
+        menuBackdrop.classList.add('active');
+        document.body.classList.add('menu-open');
+        headerToggle.setAttribute('aria-expanded', 'true');
+    };
+
+    // Close the navigation panel and restore normal page interaction
+    const closeMenu = () => {
+        panel.classList.remove('open');
+        menuBackdrop.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        headerToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    // Toggle the menu when the header button is clicked
+    headerToggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        const isOpen = panel.classList.contains('open');
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    const closeButton = panel.querySelector('.side-menu-close');
+    closeButton?.addEventListener('click', closeMenu);
+    menuBackdrop.addEventListener('click', closeMenu);
+
+    panel.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && panel.classList.contains('open')) {
+            closeMenu();
+        }
+    });
+}
 const DELIVERY_TYPE_STORAGE_KEY = 'smart-food-delivery-type';
 const DELIVERY_FEE = 5000;
 const SERVICE_FEE = 2000;
@@ -314,6 +366,7 @@ document.addEventListener('click', (event) => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+    initializeIndexMenu();
     updateTraySummary();
 
     if (window.location.href.includes('tray.html')) {

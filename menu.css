@@ -57,6 +57,17 @@ img {
     justify-content: center;
 }
 
+.toggle-menu {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.toggle-menu:focus-visible {
+    outline: none;
+}
+
 .toggle-menu img,
 .notification img,
 .profile-pict img {

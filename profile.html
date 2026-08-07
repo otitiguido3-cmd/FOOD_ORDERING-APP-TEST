@@ -13,9 +13,9 @@
 
 <body>
     <header class="main-header">
-        <div class="toggle-menu">
-           <a href="#"><img src="images/menu.png" alt="Back"></a> 
-        </div>
+        <button class="toggle-menu" type="button" aria-label="Open menu" aria-expanded="false">
+            <img src="images/menu.png" alt="Toggle-menu">
+        </button>
         <div class="smart-food">
             <h3>My Profile</h3>
         </div>
@@ -24,6 +24,22 @@
         </div>
        
     </header>
+
+    <!-- Shared slide-out navigation panel for the app pages -->
+    <aside class="side-menu-panel" id="page-side-menu" role="navigation" aria-label="Main navigation">
+        <div class="side-menu-header">
+            <h3>Menu</h3>
+            <button class="side-menu-close" type="button" aria-label="Close menu">&times;</button>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="tray.html">Tray</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </aside>
+    <div class="side-menu-backdrop" id="page-side-backdrop"></div>
     
     <!-- STRUCTURING THE  MAIN CONTENT -->
     <section class="profile-box">
@@ -236,6 +252,7 @@
     <div class="side-menu-backdrop" id="side-menu-backdrop"></div>
     <div id="tray-toast" class="tray-toast" role="status" aria-live="polite"></div>
     
+    <script src="main.js"></script>
     <script src="profile.js"></script>
 </body>
 </html>
