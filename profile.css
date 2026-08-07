@@ -1,0 +1,270 @@
+.profile-box{
+    width: calc(100% - 20px);
+    margin: 82px 10px 16px;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid rgba(107, 170, 142, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    gap: 12px;
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, #6BAA8E, #4d7b63);
+    box-shadow: 0 8px 20px rgba(107, 170, 142, 0.25);
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+
+
+.profile-content-items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    width: calc(100% - 20px);
+    margin: 0 10px 16px;
+}
+
+.profile-content-items .total-orders {
+    background: linear-gradient(145deg, #8ec7c7, #e1f0e6);
+    border: 1px solid rgba(185, 236, 213, 0.2);
+    border-radius: 14px;
+    padding: 12px 10px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.profile-content-items .total-orders img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    
+}
+
+.profile-content-items .total-orders p {
+    margin: 4px 0;
+    font-size: 12px;
+    color: #5f6b66;
+}
+
+.profile-content-items .total-orders h4 {
+    margin: 4px 0 2px;
+    font-size: 20px;
+    color: #1f3d2f;
+    font-weight: 700;
+}
+
+
+/* STYLING THE ACCOUNT SETTINGS CONTENT */
+
+h3 {
+    margin-left: 16px ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    
+}
+
+
+
+h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    margin: 0;
+    font-style: italic;
+}
+
+
+.account-settings {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: space-between;
+    align-content: space-between;
+    align-items: center;
+    width: calc(100% - 20px);
+    height: 50px;
+    margin: 10px 16px;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid rgba(107, 170, 142, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.account-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: space-evenly;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.account-img img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.account-navigation .view-more {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    
+}
+
+
+
+
+/* STYLING THE LOGOUT CONTENT */
+.logout-box {
+   
+    width: calc(100% - 20px);
+    margin: 10px 16px;
+    padding: 14px 16px;
+    background: rgb(242, 207, 207);
+    border: 1px solid rgba(107, 170, 142, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.logout-box a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 32%;
+    text-decoration: none;
+
+}
+
+.logout-box a img {
+    width: 50px;
+}
+.logout-box a h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 10px;
+    color: red;
+}
+
+
+/* STYLING THE ACCOUNT PAGES EXTRA STYLINGS */
+
+.personal_info_edit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: calc(100% - 20px);
+    margin: 10px 16px;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid rgba(107, 170, 142, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+
+
+.edit-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 32%;
+    text-decoration: none;
+    border: 2px solid #111;
+    border-radius: 10px;
+    
+    
+}
+
+.edit-info .edit-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-right: 40px;
+    color: #1f3d2f;
+    padding: 4px 10px;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+.edit-info img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.account-security {
+    margin-top: 30px;
+}
+
+
+.save-box {
+    width: calc(100% - 20px);
+    margin: 10px 16px;
+    padding: 14px 16px;
+    background: rgb(232, 21, 21);
+    border: 1px solid rgba(107, 170, 142, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+
+}
+
+.save-box a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 32%;
+    text-decoration: none;
+
+
+}
+
+.save-box  a img {
+    width: 30px;
+}
+.save-box a h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 10px;
+    color: #fff;
+}

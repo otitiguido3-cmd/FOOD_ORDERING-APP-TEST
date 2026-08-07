@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <link rel="stylesheet" href="tray.css">
+    <link rel="stylesheet" href="profile.css">
+
+
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="toggle-menu">
+           <a href="profile.html"><img src="images/back.png" alt="Back"></a> 
+        </div>
+        <div class="smart-food">
+            <h3>Personal Information</h3>
+        </div>
+        <div class="notification" aria-label="Notifications">
+            
+        </div>
+       
+    </header>
+    
+    <!-- STRUCTURING THE  MAIN CONTENT -->
+    <section class="profile-box">
+        <div class="profile-img">
+            <img src="images/profile-pict.png" alt="Profile image">
+
+        </div>
+        <div class="profile-content">
+            <label for="name" name="profile-name">User Name</label> <br>
+            <label for="phone-number" name="phone-number">+256xxxxxxx</label> <br>
+            <label for="email" name="email">fake@gmail.com</label>
+        </div>
+        
+    </section>
+    <div class="personal_info_edit">
+        <h3>Account</h3>
+        <div class="account-navigation">
+                <a href="#" class="edit-info">
+                    <img src="images/edit.png" alt="Edit">
+                    <h4 class="edit-text">Edit</h4>
+                </a>
+        </div>
+    </div>
+    
+
+    <section>
+        <div class="account-settings">
+            <div class="account-img">
+                <img src="images/profile.png" alt="Personal Information">
+                <div class="account-content">
+                <h4>Full Name</h4> 
+                <p>Fake Username, Register First</p>
+                </div>  
+            </div>
+            
+            
+
+        </div>
+        <div class="account-settings">
+            <div class="account-img">
+                <img src="images/phone_number.png" alt="Phone Number">
+                <div class="account-content">
+                <h4>Phone Number</h4> 
+                <p name="phone_number" id="phone_number" >+256xxxxxxx</p>
+                </div>  
+            </div>
+            
+            
+
+        </div>
+        <div class="account-settings">
+            <div class="account-img">
+                <img src="images/email.png" alt="Email Address">
+                <div class="account-content">
+                <h4>Email Address</h4> 
+                <p name="email" id="email" >fake@gmail.com</p>
+                </div>  
+            </div>
+            
+           
+
+        </div>
+        <div class="account-settings">
+            <div class="account-img">
+                <img src="images/orders.png" alt="Order Items">
+                <div class="account-content">
+                <h4 >Date of Birth</h4> 
+                <p name="date_of_birth" id="date_of_birth" >dd/mm/yyyy </p>
+                </div>  
+            </div>
+            
+            
+
+        </div>
+        
+        <div class="account-settings">
+            <div class="account-img">
+                <img src="images/location.png" alt="Address">
+                <div class="account-content">
+                <h4>Address</h4> 
+                <p name="address" id="address" >Gulu City, Uganda</p>
+                </div>  
+            </div>
+            
+         
+        </div>
+        <h3 class="account-security">Account Security</h3>
+        <div class="account-settings">
+            <div class="account-img">
+                <img src="images/change_password.png" alt="Change Password">
+                <div class="account-content">
+                <h4>Change Password</h4> 
+                <p name="address" id="address" >Update your account password</p>
+                </div>  
+            </div>
+            
+            <div class="account-navigation">
+                <a href="#"><img class="view-more" src="images/view-more.png" alt="View More"></a>
+            </div>
+
+        </div>
+        
+    </section>
+    
+
+    <section class="save-box">
+        
+        <a href="#" >
+            <img class="save-img" src="images/orders.png" alt="Forward">
+            <h4>Save Changes</h4>
+            
+        </a>
+        
+    </section>
+        </div>
+    </div>
+    
+    
+     <!-- STRUCTURING THE FOOTER -->
+   
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="images/home.png" alt="Home"> <br> Home</a></li>
+                <li><a href="menu.html"><img src="images/menu.png" alt="Menu"> <br> Menu</a></li>
+                <li><a href="tray.html"><img src="images/tray.png" alt="Tray"> <br> Tray</a></li>
+                <li><a href="orders.html"><img src="images/orders.png" alt="Orders"> <br> Orders</a></li>
+                <li><a href="profile.html"><img src="images/profile.png" alt="Profile"> <br> Profile</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <div class="side-menu-backdrop" id="side-menu-backdrop"></div>
+    <div id="tray-toast" class="tray-toast" role="status" aria-live="polite"></div>
+    
+    <script src="profile.js"></script>
+</body>
+</html>
