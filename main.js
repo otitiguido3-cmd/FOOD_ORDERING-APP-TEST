@@ -1,8 +1,8 @@
-const menuContainer = document.querySelector('.side-item-menu');
-const toggleButton = document.querySelector('.side-menu-toggle');
-const closeButton = document.querySelector('.side-menu-close');
-const backdrop = document.querySelector('.side-menu-backdrop');
-const panelLinks = document.querySelectorAll('.side-menu-panel a');
+const categoryMenu = document.querySelector('.side-item-menu');
+const categoryToggleButton = categoryMenu?.querySelector('.side-menu-toggle');
+const categoryCloseButton = categoryMenu?.querySelector('.side-menu-close');
+const categoryBackdrop = document.getElementById('side-menu-backdrop');
+const categoryPanelLinks = categoryMenu?.querySelectorAll('.side-menu-panel a') ?? [];
 const trayPageContent = document.querySelector('.tray-page-content');
 const TRAY_STORAGE_KEY = 'smart-food-tray';
 
@@ -293,35 +293,40 @@ function initializeTrayPage() {
     renderTrayPage();
 }
 
-if (menuContainer && toggleButton && backdrop) {
-    const toggleMenu = () => {
-        const isOpen = menuContainer.classList.toggle('open');
-        menuContainer.setAttribute('aria-expanded', String(isOpen));
+if (categoryMenu && categoryToggleButton && categoryBackdrop) {
+    const toggleCategoryMenu = () => {
+        const isOpen = categoryMenu.classList.toggle('open');
+        categoryMenu.setAttribute('aria-expanded', String(isOpen));
         document.body.classList.toggle('menu-open', isOpen);
-        backdrop.classList.toggle('active', isOpen);
-        toggleButton.setAttribute('aria-label', isOpen ? 'Close categories' : 'Open categories');
+        categoryBackdrop.classList.toggle('active', isOpen);
+        categoryToggleButton.setAttribute('aria-label', isOpen ? 'Close categories' : 'Open categories');
     };
 
-    toggleButton.addEventListener('click', toggleMenu);
-
-    if (closeButton) {
-        closeButton.addEventListener('click', toggleMenu);
-    }
-
-    backdrop.addEventListener('click', toggleMenu);
-
-    panelLinks.forEach((link) => {
-        link.addEventListener('click', () => {
-            if (menuContainer.classList.contains('open')) {
-                toggleMenu();
-            }
-        });
+    categoryToggleButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        toggleCategoryMenu();
     });
 
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && menuContainer.classList.contains('open')) {
-            toggleMenu();
+    categoryCloseButton?.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (categoryMenu.classList.contains('open')) {
+            toggleCategoryMenu();
         }
+    });
+
+    categoryBackdrop.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (categoryMenu.classList.contains('open')) {
+            toggleCategoryMenu();
+        }
+    });
+
+    categoryPanelLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            if (categoryMenu.classList.contains('open')) {
+                toggleCategoryMenu();
+            }
+        });
     });
 }
 
@@ -365,11 +370,17 @@ document.addEventListener('click', (event) => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+const initializeApp = () => {
     initializeIndexMenu();
     updateTraySummary();
 
     if (window.location.href.includes('tray.html')) {
         initializeTrayPage();
     }
-});
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeApp);
+} else {
+    initializeApp();
+}

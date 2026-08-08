@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Location</title>
+    <link rel="stylesheet" href="tray.css">
+    <link rel="stylesheet" href="profile.css">
+
+
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="toggle-menu">
+           <a href="profile.html"><img src="images/back.png" alt="Back"></a> 
+        </div>
+        <div class="smart-food">
+            <h3>Saved Location</h3>
+        </div>
+        <div class="notification" aria-label="Notifications">
+            
+        </div>
+       
+    </header>
+    
+    <!-- STRUCTURING THE  MAIN CONTENT -->
+    <div class="address-box">
+        <div class="address-title">
+            <h4>My Saved Locations</h4>
+        </div>
+        <div class="add-address">
+           <button class="add-address-button"> 
+                <img src="images/add.png" alt="">
+                <h4>Add New</h4>
+            </button>
+        </div>
+    </div>
+
+    <div class="address-block">
+        <div class="home-header">
+            <div class="sub-home-box">
+                <img src="images/home.png" alt="Home">
+                <h4>Home</h4>
+            </div>
+            <button class="edit-address">
+                <img src="images/edit.png" alt="Edit">
+                <h4>Edit</h4>
+            </button>
+        </div>
+
+        <div class="address-info">
+            <div class="content">
+                <label for="room-number" class="home-info">Room Number:</label>
+                <p name="room-number"class="home-p" >Fake Now</p>
+            </div>
+            <div class="content">
+                <label for="road" class="home-info">Road Identification:</label>
+                <p name="road"class="home-p" >Laroo Road</p>
+            </div>
+            <div class="content">
+                <label for="subcounty/Division" class="home-info">sub-county/Division:</label>
+                <p name="subcounty/Division"class="home-p" >Pece Division</p>
+            </div>
+            <div class="content">
+                <label for="district" class="home-info">District:</label>
+                <p name="subcounty/Division"class="home-p" >Gulu</p>
+            </div>
+            
+        </div>
+        
+    </div>
+
+<!-- WORK ADDRESS -->
+    <div class="address-block">
+        <div class="home-header">
+            <div class="sub-home-box">
+                <img src="images/work.png" alt="Work">
+                <h4>Work</h4>
+            </div>
+            <button class="edit-address">
+                <img src="images/edit.png" alt="Edit">
+                <h4>Edit</h4>
+            </button>
+        </div>
+
+        <div class="address-info">
+            <div class="content">
+                <label for="room-number" class="home-info">Room Number:</label>
+                <p name="room-number"class="home-p" >Fake Now</p>
+            </div>
+            <div class="content">
+                <label for="road" class="home-info">Road Identification:</label>
+                <p name="road"class="home-p" >Laroo Road, Gulu University</p>
+            </div>
+            <div class="content">
+                <label for="subcounty/Division" class="home-info">sub-county/Division:</label>
+                <p name="subcounty/Division"class="home-p" >Pece Division</p>
+            </div>
+            <div class="content">
+                <label for="district" class="home-info">District:</label>
+                <p name="subcounty/Division"class="home-p" >Gulu</p>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    
+     <!-- STRUCTURING THE FOOTER -->
+   
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="images/home.png" alt="Home"> <br> Home</a></li>
+                <li><a href="menu.html"><img src="images/menu.png" alt="Menu"> <br> Menu</a></li>
+                <li><a href="tray.html"><img src="images/tray.png" alt="Tray"> <br> Tray</a></li>
+                <li><a href="orders.html"><img src="images/orders.png" alt="Orders"> <br> Orders</a></li>
+                <li><a href="profile.html"><img src="images/profile.png" alt="Profile"> <br> Profile</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <div class="side-menu-backdrop" id="side-menu-backdrop"></div>
+    <div id="tray-toast" class="tray-toast" role="status" aria-live="polite"></div>
+    
+    <script src="profile.js"></script>
+</body>
+</html>

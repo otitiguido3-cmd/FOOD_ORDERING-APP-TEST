@@ -366,6 +366,15 @@ img {
     overflow-y: auto;
 }
 
+.side-menu-panel.open {
+    transform: translateX(0);
+}
+
+#page-side-menu.open,
+#side-menu-panel.open {
+    transform: translateX(0);
+}
+
 .side-item-menu.open .side-menu-panel {
     transform: translateX(0);
 }
