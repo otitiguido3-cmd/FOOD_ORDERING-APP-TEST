@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notification</title>
+    <link rel="stylesheet" href="tray.css">
+    <link rel="stylesheet" href="profile.css">
+
+
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="toggle-menu">
+           <a href="profile.html"><img src="images/back.png" alt="Back"></a> 
+        </div>
+        <div class="smart-food">
+            <h3>Notifications</h3>
+        </div>
+        <div class="notification" aria-label="Notifications">
+            
+        </div>
+       
+    </header>
+    
+    <!-- STRUCTURING THE PAYMENT METHODS CONTENT PAGE -->
+    <div class="rewards_coupons">
+        <img src="images/rewarded-points.png" alt="Mtn">
+        <div class="mtn">
+            <h4>Your Points</h4>
+            <h2>0</h2>
+            <label for="member_type"></label>
+
+        </div>
+    </div>
+    
+    <h4 class="available_coupons_header">Available Coupons</h4>
+    <div class="coupons">
+        
+        <p>Ops no coupons yet.!! <br>We are glad to have, your Luck is coming soon</p>
+
+    </div>
+    
+     <!-- STRUCTURING THE FOOTER -->
+   
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="images/home.png" alt="Home"> <br> Home</a></li>
+                <li><a href="menu.html"><img src="images/menu.png" alt="Menu"> <br> Menu</a></li>
+                <li><a href="tray.html"><img src="images/tray.png" alt="Tray"> <br> Tray</a></li>
+                <li><a href="orders.html"><img src="images/orders.png" alt="Orders"> <br> Orders</a></li>
+                <li><a href="profile.html"><img src="images/profile.png" alt="Profile"> <br> Profile</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <div class="side-menu-backdrop" id="side-menu-backdrop"></div>
+    <div id="tray-toast" class="tray-toast" role="status" aria-live="polite"></div>
+    
+    <script src="favourite.js"></script>
+</body>

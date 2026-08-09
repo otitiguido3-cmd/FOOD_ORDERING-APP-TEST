@@ -1,3 +1,7 @@
+// Main app script: handles the shared navigation menu, tray management,
+// item add/remove actions, and tray summary updates across the app.
+
+// Select the category menu elements that appear on the menu page.
 const categoryMenu = document.querySelector('.side-item-menu');
 const categoryToggleButton = categoryMenu?.querySelector('.side-menu-toggle');
 const categoryCloseButton = categoryMenu?.querySelector('.side-menu-close');
@@ -57,10 +61,12 @@ function initializeIndexMenu() {
         }
     });
 }
+// Shared constants used for delivery fees and storage keys.
 const DELIVERY_TYPE_STORAGE_KEY = 'smart-food-delivery-type';
 const DELIVERY_FEE = 5000;
 const SERVICE_FEE = 2000;
 
+// Read the tray items from localStorage.
 function getTrayItems() {
     try {
         const storedItems = localStorage.getItem(TRAY_STORAGE_KEY);
@@ -70,20 +76,24 @@ function getTrayItems() {
     }
 }
 
+// Save the tray items back to localStorage.
 function saveTrayItems(items) {
     localStorage.setItem(TRAY_STORAGE_KEY, JSON.stringify(items));
 }
 
+// Read the selected delivery mode from storage.
 function getDeliveryType() {
     return localStorage.getItem(DELIVERY_TYPE_STORAGE_KEY) || 'delivery';
 }
 
+// Save the selected delivery mode to storage.
 function saveDeliveryType(type) {
     if (type === 'dine-in' || type === 'delivery') {
         localStorage.setItem(DELIVERY_TYPE_STORAGE_KEY, type);
     }
 }
 
+// Show a small popup message when an item is added to the tray.
 function showTrayFeedback(message) {
     let toast = document.getElementById('tray-toast');
 
@@ -106,6 +116,7 @@ function showTrayFeedback(message) {
     }, 2200);
 }
 
+// Recalculate the tray totals and update the footer badge.
 function updateTraySummary() {
     const trayItems = getTrayItems();
     const subtotal = trayItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -152,17 +163,20 @@ function updateTraySummary() {
     });
 }
 
+// Enable or disable the tray page content based on whether there are items.
 function setTrayPageState(isEnabled) {
     if (trayPageContent) {
         trayPageContent.classList.toggle('tray-disabled', !isEnabled);
     }
 }
 
+// Convert price text like UGX: 18,000 into a number.
 function parsePrice(value) {
     const amount = Number(String(value).replace(/[^0-9.]/g, ''));
     return Number.isFinite(amount) ? amount : 0;
 }
 
+// Extract food details from a menu or home page card.
 function buildItemFromCard(card) {
     if (!card) return null;
 
@@ -184,6 +198,7 @@ function buildItemFromCard(card) {
     };
 }
 
+// Add a selected food item to the tray and save it.
 function addItemToTray(item) {
     if (!item) return;
 
@@ -205,6 +220,7 @@ function addItemToTray(item) {
     }
 }
 
+// Increase or decrease the quantity of an item already in the tray.
 function changeTrayItemQuantity(name, change) {
     const trayItems = getTrayItems();
     const updatedItems = trayItems
@@ -221,12 +237,14 @@ function changeTrayItemQuantity(name, change) {
     renderTrayPage();
 }
 
+// Remove an item completely from the tray.
 function removeTrayItem(name) {
     const trayItems = getTrayItems().filter((item) => item.name.toLowerCase() !== name.toLowerCase());
     saveTrayItems(trayItems);
     renderTrayPage();
 }
 
+// Render the tray page contents from the saved tray items.
 function renderTrayPage() {
     const trayContainer = document.querySelector('.tray-items-list');
     if (!trayContainer) return;
@@ -274,6 +292,7 @@ function renderTrayPage() {
     updateTraySummary();
 }
 
+// Initialize the tray page when the user opens it.
 function initializeTrayPage() {
     const trayContainer = document.querySelector('.tray-items-list');
 
@@ -330,6 +349,7 @@ if (categoryMenu && categoryToggleButton && categoryBackdrop) {
     });
 }
 
+// Handle clicks for adding items, changing quantities, or removing items.
 document.addEventListener('click', (event) => {
     const menuAddButton = event.target.closest('.food_item_add');
     if (menuAddButton) {
@@ -370,6 +390,7 @@ document.addEventListener('click', (event) => {
     }
 });
 
+// Start the app behavior on page load.
 const initializeApp = () => {
     initializeIndexMenu();
     updateTraySummary();

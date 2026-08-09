@@ -1,8 +1,13 @@
+// Order page script: manages the order summary, delivery mode selection,
+// fee calculation, and the order placement experience.
+
+// Shared storage keys and fee values used by the order page.
 const TRAY_STORAGE_KEY = 'smart-food-tray';
 const DELIVERY_TYPE_STORAGE_KEY = 'smart-food-delivery-type';
 const DELIVERY_FEE = 5000;
 const SERVICE_FEE = 2000;
 
+// Read the current tray items from localStorage.
 function getTrayItems() {
     try {
         const storedItems = localStorage.getItem(TRAY_STORAGE_KEY);
@@ -12,21 +17,25 @@ function getTrayItems() {
     }
 }
 
+// Read the selected delivery method from storage.
 function getDeliveryType() {
     const storedType = localStorage.getItem(DELIVERY_TYPE_STORAGE_KEY);
     return storedType === 'dine-in' ? 'dine-in' : 'delivery';
 }
 
+// Save the selected delivery method to storage.
 function saveDeliveryType(type) {
     if (type === 'dine-in' || type === 'delivery') {
         localStorage.setItem(DELIVERY_TYPE_STORAGE_KEY, type);
     }
 }
 
+// Format a number into the UGX currency style used by the app.
 function formatCurrency(value) {
     return `UGX: ${Number(value).toLocaleString()}`;
 }
 
+// Build the HTML row that displays each ordered item.
 function buildOrderItemRow(item) {
     return `
         <div class="order-item-row">
@@ -42,6 +51,7 @@ function buildOrderItemRow(item) {
     `;
 }
 
+// Refresh the order summary, fees, and empty-state display.
 function updateOrderSummary() {
     const items = getTrayItems();
     const deliveryType = getDeliveryType();
@@ -100,6 +110,7 @@ function updateOrderSummary() {
     }
 }
 
+// Initialize the order page interactions and summary display.
 function initializeOrderPage() {
     const dineInElement = document.querySelector('.dine-in');
     const deliveryElement = document.querySelector('.delivery');

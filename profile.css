@@ -418,3 +418,313 @@ p {
     margin: 10px 10px;
 
 }
+
+/* STYLING THE FAVOURITE PAGE */
+.favourite {
+    width: calc(100% - 24px);
+    margin: 82px 12px 16px;
+    padding: 14px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fbf7 100%);
+    border: 1px solid rgba(107, 170, 142, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.favourit-img {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #f7efe2 0%, #f1e0bc 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.favourit-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.favourit-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.favourit-content h4 {
+    color: #2f3d33;
+    font-weight: 700;
+}
+
+.favourit-content p {
+    color: #6b7a6f;
+    font-style: normal;
+    line-height: 1.4;
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #6b4f1d;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.rating-row img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.favourit-symbol {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff3ef;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.favourit-symbol img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+
+/* STYLING THE  ORDER HISTORY*/
+.order_history_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 20px);
+    margin: 74px 10px 0;
+    padding: 18px 18px;
+    gap: 16px;
+    background: transparent;
+    border: 1px solid rgba(107, 170, 142, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+    height: fit-content;
+}
+
+
+.order_history_button {
+    margin: 5px;
+    border-radius: 10px;
+}
+
+/*STYLING THE PAYMENT METHODS PAGES */
+.payment_methods {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: calc(100% - 20px);
+    margin: 74px 10px 0;
+    padding: 18px 18px;
+    gap: 16px;
+    background: transparent;
+    border: 1px solid rgba(107, 170, 142, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+    height: fit-content;
+
+}
+
+.payment_methods img {
+    width: 100px;
+    height: auto;
+
+}
+
+.mtn {
+    display: block;
+    
+}
+
+.mtn-cridentials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 30px;
+    
+}
+
+
+/* Styling for the airtel payment */
+
+.payment_airtel {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: calc(100% - 20px);
+    margin: 10px 10px 0;
+    padding: 18px 18px;
+    gap: 16px;
+    background: transparent;
+    border: 1px solid rgba(107, 170, 142, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+    height: fit-content;
+
+
+}
+
+.payment_airtel img {
+    width: 100px;
+    height: auto;
+
+}
+
+
+
+/* STYLING THE REWARDS AND THE COUPONS PAGE */
+
+.rewards_coupons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100% - 20px);
+    margin: 74px 10px 0;
+    padding: 18px 18px;
+    gap: 16px;
+    background: transparent;
+    border: 1px solid rgba(107, 170, 142, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+    height: fit-content;
+}
+
+.rewards_coupons img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    
+}
+.available_coupons_header {
+    margin: 10px;
+}
+
+.coupons {
+    display: block;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: calc(100% - 20px);
+    margin: 10px 10px 0;
+    padding: 18px 18px;
+    gap: 16px;
+    background: transparent;
+    border: 1px solid rgba(107, 170, 142, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+    height: fit-content;
+
+}
+
+
+/* STYLING THE HELP AND SUPPORT CONTENT */
+.help_and_support {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100% - 20px);
+    margin: 74px 10px 0;
+    padding: 10px;
+    gap: 16px;
+    background: rgb(229, 194, 147);
+    border: 1px solid rgba(107, 170, 142, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+    height: fit-content;
+}
+
+.help_and_support img{
+     width: 100px;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+
+.help_concerns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: space-between;
+    align-content: space-between;
+    align-items: center;
+    width: calc(100% - 20px);
+    height: 50px;
+    margin: 10px 16px;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid rgba(107, 170, 142, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+
+.help-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: space-evenly;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.help-img img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+
+.contact-box {
+    width: calc(100% - 20px);
+    margin: 10px 16px;
+    padding: 14px 16px;
+    background: rgb(232, 21, 21);
+    border: 1px solid rgba(107, 170, 142, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+
+}
+
+.contact-box a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 32%;
+    text-decoration: none;
+
+
+}
+
+.contact-box  a img {
+    width: 30px;
+}
+.contact-box a h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 10px;
+    color: #fff;
+}
