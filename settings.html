@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payments_method</title>
+    <title>Settings</title>
     <link rel="stylesheet" href="tray.css">
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="dark_mode.css">
@@ -18,7 +18,7 @@
            <a href="profile.html"><img src="images/back.png" alt="Back"></a> 
         </div>
         <div class="smart-food">
-            <h3>Payment Method</h3>
+            <h3>Settings</h3>
         </div>
         <div class="notification" aria-label="Notifications">
             
@@ -27,62 +27,63 @@
     </header>
     
     <!-- STRUCTURING THE PAYMENT METHODS CONTENT PAGE -->
-    <div class="payment_methods">
-        <img src="images/mtn.png" alt="Mtn">
-        <div class="mtn">
-            <h4>MTN Mobile Money</h4>
-            <div >
-                <div class="mtn-cridentials">
-                    <label for="account-name">Name: </label>
-                    <h4>fake</h4>
-                </div>
+    
+    <h4 class="settings-header">Preferences</h4>
+        
+    <div class="settings_concerns">
+            <div class="settings-img">
+                <img src="images/dark_mode.png" alt="Change Password">
+                <div class="account-content">
                 
-                <div class="mtn-cridentials">
-                    <label for="account-number">Number: </label>
-                    <h4>+2567xxxxxxxx</h4>
-                </div>
+                <p  >Dark Mode</p>
+                </div>  
+            </div>
                 
+            <div class="account-navigation">
+                <input type="checkbox" name="dark_mode" id="dark-mode-toggle">
             </div>
 
-        </div>
     </div>
-    <div class="payment_airtel">
-        <img  src="images/airtel.png" alt="Mtn">
-        <div class="mtn">
-            <h4>Airtel Mobile Money</h4>
-            <div >
-                <div class="mtn-cridentials">
-                    <label for="account-name">Name: </label>
-                    <h4>username</h4>
-                </div>
+    <div class="help_concerns">
+            <div class="help-img">
+                <img src="images/language.png" alt="Language">
+                <div class="account-content">
                 
-                <div class="mtn-cridentials">
-                    <label for="account-number">Number: </label>
-                    <h4>+2567xxxxxxxx</h4>
-                </div>
-                
+                <p  >Language</p>
+                </div>  
             </div>
-        </div>
+                
+            <div class="account-navigation">
+                <a href="#"><img class="view-more" src="images/view-more.png" alt="View More"></a>
+            </div>
+
     </div>
-    <div class="payment_airtel">
-        <img  src="images/visa.png" alt="Mtn">
-        <div class="mtn">
-            <h4>VISA Payment</h4>
-            <div >
-                <div class="mtn-cridentials">
-                    <label for="account-name">Name: </label>
-                    <h4>fake</h4>
-                </div>
+    <div class="help_concerns">
+            <div class="help-img">
+                <img src="images/currency.png" alt="Currency">
+                <div class="account-content">
                 
-                <div class="mtn-cridentials">
-                    <label for="account-number">Number: </label>
-                    <h4>+2567xxxxxxxx</h4>
-                </div>
-                
+                <p  >Currency</p>
+                </div>  
             </div>
-        </div>
+                
+            <div class="account-navigation">
+                <a href="#"><img class="view-more" src="images/view-more.png" alt="View More"></a>
+            </div>
+
     </div>
     
+    <section class="logout-box">
+        
+        <a href="#" >
+            <img class="logout-img" src="images/logout.png" alt="Log out">
+            <h4>Log out</h4>
+            
+        </a>
+        
+    </section>
+    
+        
      <!-- STRUCTURING THE FOOTER -->
    
 
@@ -104,4 +105,3 @@
     <script src="favourite.js"></script>
     <script src="dark_mode.js"></script>
 </body>
-</html>

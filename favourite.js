@@ -263,3 +263,6 @@ if (document.readyState === 'loading') {
     initializeFavouritePage();
     attachFavouriteTracking();
 }
+
+
+

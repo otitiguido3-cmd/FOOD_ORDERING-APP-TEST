@@ -1,0 +1,1182 @@
+/* =========================================================
+   SMARTFOOD GLOBAL DARK MODE
+   This file controls dark mode across ALL pages.
+   ========================================================= */
+
+/* ---------- LIGHT MODE DEFAULT COLORS ---------- */
+
+:root {
+    --app-bg: #f8f8f8;
+    --surface: #ffffff;
+    --surface-secondary: #f5f5f5;
+    --text-main: #171717;
+    --text-secondary: #666666;
+    --border-color: #e5e5e5;
+    --input-bg: #ffffff;
+    --header-bg: #ffffff;
+    --footer-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+
+    /* SmartFood orange */
+    --primary-color: #ff5a00;
+}
+
+
+/* =========================================================
+   DARK MODE COLORS
+   ========================================================= */
+
+body.dark-mode {
+    --app-bg: #0f1115;
+    --surface: #181b21;
+    --surface-secondary: #20242c;
+    --text-main: #f5f5f5;
+    --text-secondary: #b5bbc5;
+    --border-color: #30353e;
+    --input-bg: #20242c;
+    --header-bg: #15181d;
+    --footer-bg: #15181d;
+    --shadow-color: rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   BASIC PAGE
+   ========================================================= */
+
+html {
+    background: var(--app-bg);
+}
+
+body {
+    background-color: var(--app-bg);
+    color: var(--text-main);
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode span,
+body.dark-mode li {
+    color: var(--text-main);
+}
+
+body.dark-mode small {
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+body.dark-mode .main-header {
+    background-color: var(--header-bg) !important;
+    color: var(--text-main) !important;
+    border-bottom-color: var(--border-color) !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+body.dark-mode footer {
+    background-color: var(--footer-bg) !important;
+    border-top-color: var(--border-color) !important;
+}
+
+body.dark-mode footer a {
+    color: var(--text-main) !important;
+}
+
+
+/* =========================================================
+   COMMON CARDS / BOXES
+   ========================================================= */
+
+body.dark-mode .profile-box,
+body.dark-mode .profile-content-items,
+body.dark-mode .account-settings,
+body.dark-mode .payment_methods,
+body.dark-mode .payment_airtel,
+body.dark-mode .rewards_coupons,
+body.dark-mode .coupons,
+body.dark-mode .help_and_support,
+body.dark-mode .help_concerns,
+body.dark-mode .contact-box,
+body.dark-mode .about_SmartFood,
+body.dark-mode .favourites-section,
+body.dark-mode .favourite-list,
+body.dark-mode .order_history_content,
+body.dark-mode .order_history_header,
+body.dark-mode .free-delivery,
+body.dark-mode .tray-page-content,
+body.dark-mode .calculation,
+body.dark-mode .special-instruction,
+body.dark-mode .estimated-delivery-time,
+body.dark-mode .save-box,
+body.dark-mode .logout-box,
+body.dark-mode .welcome_banner,
+body.dark-mode .search-bar,
+body.dark-mode .all-food_items,
+body.dark-mode .special_1,
+body.dark-mode .special_2 {
+    background-color: var(--surface) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+
+/* =========================================================
+   ACCOUNT / PROFILE
+   ========================================================= */
+
+body.dark-mode .account-content h4,
+body.dark-mode .account-content p {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .account-content p {
+    color: var(--text-secondary) !important;
+}
+
+
+/* =========================================================
+   PROFILE STATISTICS
+   ========================================================= */
+
+body.dark-mode .total-orders {
+    background-color: var(--surface) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+
+/* =========================================================
+   PAYMENT METHODS
+   ========================================================= */
+
+body.dark-mode .mtn h4,
+body.dark-mode .mtn label {
+    color: var(--text-main) !important;
+}
+
+
+/* =========================================================
+   SEARCH BOXES
+   ========================================================= */
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: var(--input-bg) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #9097a3 !important;
+}
+
+
+/* =========================================================
+   SELECT OPTIONS
+   ========================================================= */
+
+body.dark-mode option {
+    background-color: #20242c;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   MENU ITEMS
+   ========================================================= */
+
+body.dark-mode .food_item_content h4,
+body.dark-mode .food_item_content p,
+body.dark-mode .food_item_content label {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .food_item_content p {
+    color: var(--text-secondary) !important;
+}
+
+
+/* =========================================================
+   MENU CATEGORY AREA
+   ========================================================= */
+
+body.dark-mode .all-item-header,
+body.dark-mode .all-items,
+body.dark-mode .sort-by {
+    color: var(--text-main) !important;
+}
+
+
+/* =========================================================
+   SLIDE-OUT MENU
+   ========================================================= */
+
+body.dark-mode .side-menu-panel {
+    background-color: #181b21 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .side-menu-panel h3,
+body.dark-mode .side-menu-panel a,
+body.dark-mode .side-menu-panel span {
+    color: #ffffff !important;
+}
+
+body.dark-mode .side-menu-panel li {
+    border-bottom-color: #30353e !important;
+}
+
+
+/* =========================================================
+   ORDER HISTORY FILTER BUTTONS
+   ========================================================= */
+
+body.dark-mode .order_history_button {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .order_history_header button {
+    background-color: var(--surface-secondary) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+body.dark-mode a {
+    color: inherit;
+}
+
+
+/* =========================================================
+   HORIZONTAL LINES
+   ========================================================= */
+
+body.dark-mode hr {
+    border-color: var(--border-color) !important;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+body.dark-mode .about_SmartFood h2,
+body.dark-mode .about_SmartFood h4,
+body.dark-mode .about_SmartFood p {
+    color: var(--text-main) !important;
+}
+
+
+/* =========================================================
+   REWARDS / COUPONS
+   ========================================================= */
+
+body.dark-mode .available_coupons_header {
+    color: var(--text-main) !important;
+}
+
+
+/* =========================================================
+   CONTACT / BUTTON AREAS
+   ========================================================= */
+
+body.dark-mode .contact-box h4,
+body.dark-mode .save-box h4,
+body.dark-mode .logout-box h4 {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   DARK MODE IMAGE ADJUSTMENTS
+   Only apply to icons that are normally black/dark.
+   ========================================================= */
+
+body.dark-mode .toggle-menu img,
+body.dark-mode .view-more {
+    filter: brightness(0) invert(1);
+}
+
+
+/* =========================================================
+   SMOOTH TRANSITION
+   ========================================================= */
+
+body,
+body *,
+body::before,
+body::after {
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+
+/* =========================================================
+   ORDER PAGE DARK MODE
+   ========================================================= */
+
+body.dark-mode .free-delivery,
+body.dark-mode .tray-page-content,
+body.dark-mode .calculation,
+body.dark-mode .special-instruction,
+body.dark-mode .estimated-delivery-time,
+body.dark-mode .place-order,
+body.dark-mode .selection-box,
+body.dark-mode .table-number-box,
+body.dark-mode .dine-in,
+body.dark-mode .delivery {
+    background-color: var(--surface) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+
+/* Order text */
+
+body.dark-mode .free-delivery h4,
+body.dark-mode .free-delivery p,
+body.dark-mode .tray-page-content h4,
+body.dark-mode .tray-page-content p,
+body.dark-mode .calculation,
+body.dark-mode .calculation-content,
+body.dark-mode .sub-total,
+body.dark-mode .fee,
+body.dark-mode .special-instruction h4,
+body.dark-mode .estimated-delivery-time,
+body.dark-mode .dine-in h4,
+body.dark-mode .dine-in p,
+body.dark-mode .delivery h4,
+body.dark-mode .delivery p {
+    color: var(--text-main) !important;
+}
+
+
+/* Textarea */
+
+body.dark-mode .special-instruction textarea {
+    background-color: var(--input-bg) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+
+/* Placeholder */
+
+body.dark-mode .special-instruction textarea::placeholder {
+    color: var(--text-secondary) !important;
+}
+
+
+/* Table number */
+
+body.dark-mode .table-number-box label {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .table-number-box select {
+    background-color: var(--input-bg) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+
+/* Horizontal line */
+
+body.dark-mode .calculation hr {
+    border-color: var(--border-color) !important;
+}
+
+
+/* Empty order message */
+
+body.dark-mode .order-empty-state,
+body.dark-mode .empty-state-content {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .empty-state-content p {
+    color: var(--text-main) !important;
+}
+
+
+/* Place order button */
+
+body.dark-mode .checkout {
+    color: #ffffff !important;
+}
+
+
+
+/* =========================================================
+   SMARTFOOD TRAY PAGE — DARK MODE OVERRIDES
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. FREE DELIVERY SECTION
+   --------------------------------------------------------- */
+
+body.dark-mode .free-delivery {
+    background: var(--surface) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 10px 24px var(--shadow-color) !important;
+}
+
+body.dark-mode .free-delivery-content {
+    background: transparent !important;
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .deliver-now {
+    background: transparent !important;
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .deliver-now h4 {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .free-delivery p {
+    color: var(--text-secondary) !important;
+}
+
+
+/* ---------------------------------------------------------
+   2. MAIN TRAY CONTENT
+   --------------------------------------------------------- */
+
+body.dark-mode .tray-page-content {
+    background: var(--app-bg) !important;
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .tray-actions {
+    background: transparent !important;
+    color: var(--text-main) !important;
+}
+
+
+/* ---------------------------------------------------------
+   3. TRAY ITEMS
+   --------------------------------------------------------- */
+
+body.dark-mode .tray-items-list {
+    background: transparent !important;
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .tray-item {
+    background: var(--surface) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 6px 18px var(--shadow-color) !important;
+}
+
+
+/* Tray item text */
+
+body.dark-mode .tray-item h3,
+body.dark-mode .tray-item h4,
+body.dark-mode .tray-item p,
+body.dark-mode .tray-item span,
+body.dark-mode .tray-item label {
+    color: var(--text-main) !important;
+}
+
+
+/* Secondary tray text */
+
+body.dark-mode .tray-item p {
+    color: var(--text-secondary) !important;
+}
+
+
+/* ---------------------------------------------------------
+   4. PROMO BOX
+   --------------------------------------------------------- */
+
+body.dark-mode .promo-box {
+    background: var(--surface) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 8px 20px var(--shadow-color) !important;
+}
+
+body.dark-mode .promo-box h4 {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .promo-box p {
+    color: var(--text-secondary) !important;
+}
+
+
+/* Promo button */
+
+body.dark-mode .apply-promo-code {
+    background: var(--primary-color) !important;
+    color: #ffffff !important;
+    border-color: var(--primary-color) !important;
+}
+
+
+/* ---------------------------------------------------------
+   5. CALCULATION / PRICE SUMMARY
+   --------------------------------------------------------- */
+
+body.dark-mode .calculation {
+    background: var(--surface) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 8px 20px var(--shadow-color) !important;
+}
+
+
+/* Calculation text */
+
+body.dark-mode .calculation-content,
+body.dark-mode .sub-total,
+body.dark-mode .fee {
+    color: var(--text-main) !important;
+}
+
+
+/* Make the Total slightly stronger */
+
+body.dark-mode .calculation-content:last-child .sub-total,
+body.dark-mode .calculation-content:last-child .fee {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+
+/* Divider */
+
+body.dark-mode .calculation hr {
+    border-color: var(--border-color) !important;
+}
+
+
+/* ---------------------------------------------------------
+   6. CHECKOUT AREA
+   --------------------------------------------------------- */
+
+body.dark-mode .proceed-to-checkout {
+    background: transparent !important;
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .proceed-to-checkout .checkout {
+    background: var(--primary-color) !important;
+    color: #ffffff !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 6px 16px rgba(255, 90, 0, 0.25) !important;
+}
+
+
+/* Checkout link */
+
+body.dark-mode .proceed-to-checkout a {
+    color: var(--text-main);
+}
+
+
+/* ---------------------------------------------------------
+   7. DISABLED TRAY
+   --------------------------------------------------------- */
+
+body.dark-mode .tray-disabled {
+    background: var(--app-bg) !important;
+    color: var(--text-main) !important;
+}
+
+
+/* ---------------------------------------------------------
+   8. EMPTY TRAY
+   --------------------------------------------------------- */
+
+body.dark-mode .empty-tray,
+body.dark-mode .tray-empty,
+body.dark-mode .empty-state {
+    background: transparent !important;
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .empty-tray h4,
+body.dark-mode .tray-empty h4,
+body.dark-mode .empty-state h4,
+body.dark-mode .empty-tray p,
+body.dark-mode .tray-empty p,
+body.dark-mode .empty-state p {
+    color: var(--text-main) !important;
+}
+
+
+/* ---------------------------------------------------------
+   9. QUANTITY CONTROLS
+   --------------------------------------------------------- */
+
+body.dark-mode .quantity-control,
+body.dark-mode .quantity-controls {
+    background: var(--surface-secondary) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.dark-mode .quantity-control button,
+body.dark-mode .quantity-controls button {
+    background: var(--surface-secondary) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+
+/* ---------------------------------------------------------
+   10. INPUTS / PROMO INPUT
+   --------------------------------------------------------- */
+
+body.dark-mode .promo-box input,
+body.dark-mode .tray-page-content input {
+    background: var(--input-bg) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.dark-mode .promo-box input::placeholder,
+body.dark-mode .tray-page-content input::placeholder {
+    color: var(--text-secondary) !important;
+}
+
+
+/* ---------------------------------------------------------
+   11. TRAY BUTTONS
+   --------------------------------------------------------- */
+
+body.dark-mode .tray-page-content button {
+    color: var(--text-main);
+    border-color: var(--border-color);
+}
+
+
+/* Keep primary/action buttons orange */
+
+body.dark-mode .tray-page-content .apply-promo-code,
+body.dark-mode .tray-page-content .checkout {
+    background: var(--primary-color) !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   12. TRAY TOAST
+   --------------------------------------------------------- */
+
+body.dark-mode .tray-toast {
+    background: var(--surface-secondary) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 8px 20px var(--shadow-color) !important;
+}
+
+
+/* ---------------------------------------------------------
+   13. FOOTER
+   --------------------------------------------------------- */
+
+body.dark-mode footer {
+    background: var(--footer-bg) !important;
+    color: var(--text-main) !important;
+    border-top-color: var(--border-color) !important;
+}
+
+body.dark-mode footer nav,
+body.dark-mode footer ul,
+body.dark-mode footer li {
+    background: transparent !important;
+}
+
+body.dark-mode footer a {
+    color: var(--text-main) !important;
+}
+
+
+/* ---------------------------------------------------------
+   14. BACKGROUND AREAS
+   --------------------------------------------------------- */
+
+body.dark-mode .tray-page,
+body.dark-mode .tray-container,
+body.dark-mode main {
+    background-color: var(--app-bg) !important;
+    color: var(--text-main) !important;
+}
+
+
+/* ---------------------------------------------------------
+   15. DARK MODE IMAGES / ICONS
+   --------------------------------------------------------- */
+
+/* Icons that are normally black */
+
+body.dark-mode .checkout-img,
+body.dark-mode .profile-pict img,
+body.dark-mode .toggle-menu img {
+    filter: brightness(0) invert(1);
+}
+
+
+/* Keep colorful food/promo illustrations normal */
+
+body.dark-mode .free-delivery img,
+body.dark-mode .promo-img img {
+    filter: none;
+}
+
+
+
+
+/* =========================================================
+   SMARTFOOD MENU PAGE — DARK MODE OVERRIDES
+   These rules override hardcoded colors from menu.css
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   SEARCH BAR
+   --------------------------------------------------------- */
+
+body.dark-mode .search-bar {
+    background-color: var(--surface) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 8px 20px var(--shadow-color) !important;
+}
+
+body.dark-mode .search_food_item {
+    background-color: var(--input-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.dark-mode .search_food_item input,
+body.dark-mode #search-item {
+    background-color: var(--input-bg) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.dark-mode #search-item::placeholder {
+    color: var(--text-secondary) !important;
+}
+
+
+/* ---------------------------------------------------------
+   TODAY'S SPECIAL / WELCOME BANNER
+   --------------------------------------------------------- */
+
+body.dark-mode .welcome_banner {
+    background: linear-gradient(
+        135deg,
+        #1b2522,
+        #202a27
+    ) !important;
+
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 10px 24px var(--shadow-color) !important;
+}
+
+body.dark-mode .welcome_banner h4,
+body.dark-mode .welcome_banner p {
+    color: var(--text-main) !important;
+}
+
+
+/* ---------------------------------------------------------
+   ALL ITEMS HEADER
+   --------------------------------------------------------- */
+
+body.dark-mode .all-item-header {
+    background-color: var(--app-bg) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.dark-mode .all-items,
+body.dark-mode .all-item-header label {
+    color: var(--text-main) !important;
+}
+
+
+/* ---------------------------------------------------------
+   SORT BY
+   --------------------------------------------------------- */
+
+body.dark-mode .sort-by {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .sort-by label {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .sort-by select {
+    background-color: var(--surface-secondary) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+body.dark-mode .sort-by option {
+    background-color: #20242c !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   FOOD ITEM CARDS
+   --------------------------------------------------------- */
+
+body.dark-mode .all-food_items {
+    background: var(--surface) !important;
+    color: var(--text-main) !important;
+
+    border-color: var(--border-color) !important;
+
+    box-shadow:
+        0 8px 20px var(--shadow-color) !important;
+}
+
+
+/* Food names */
+
+body.dark-mode .food_item_content h4 {
+    color: var(--text-main) !important;
+}
+
+
+/* Food descriptions */
+
+body.dark-mode .food_item_content p {
+    color: var(--text-secondary) !important;
+}
+
+
+/* Ratings */
+
+body.dark-mode .food_item_content label {
+    color: var(--text-secondary) !important;
+}
+
+
+/* Price */
+
+body.dark-mode .food_item_content h4:last-child {
+    color: var(--primary-color) !important;
+}
+
+
+/* ---------------------------------------------------------
+   FOOD ITEM IMAGE AREA
+   --------------------------------------------------------- */
+
+body.dark-mode .food_item_img {
+    background-color: var(--surface-secondary) !important;
+    border-color: var(--border-color) !important;
+}
+
+
+/* ---------------------------------------------------------
+   ADD TO TRAY AREA
+   --------------------------------------------------------- */
+
+body.dark-mode .food_item_add {
+    background-color: transparent !important;
+}
+
+body.dark-mode .food_item_add img {
+    filter: none;
+}
+
+
+/* ---------------------------------------------------------
+   CATEGORY SIDE MENU
+   --------------------------------------------------------- */
+
+body.dark-mode .side-item-menu .side-menu-panel {
+    background-color: #181b21 !important;
+    color: var(--text-main) !important;
+
+    border-color: var(--border-color) !important;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.45) !important;
+}
+
+body.dark-mode .side-item-menu .side-menu-panel .side-menu-header {
+    background-color: #15181d !important;
+    color: var(--text-main) !important;
+    border-bottom-color: var(--border-color) !important;
+}
+
+body.dark-mode .side-item-menu .side-menu-panel span {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .side-item-menu .side-menu-panel a {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .side-item-menu .side-menu-panel li {
+    background-color: transparent !important;
+    border-bottom-color: var(--border-color) !important;
+}
+
+body.dark-mode .side-item-menu .side-menu-panel li:hover {
+    background-color: var(--surface-secondary) !important;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN SLIDE-OUT MENU
+   --------------------------------------------------------- */
+
+body.dark-mode .side-menu-panel {
+    background-color: #181b21 !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.dark-mode .side-menu-panel .side-menu-header {
+    background-color: #15181d !important;
+    color: var(--text-main) !important;
+    border-bottom-color: var(--border-color) !important;
+}
+
+body.dark-mode .side-menu-panel .side-menu-header h3 {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .side-menu-panel a {
+    color: var(--text-main) !important;
+}
+
+body.dark-mode .side-menu-panel li {
+    background-color: transparent !important;
+    border-bottom-color: var(--border-color) !important;
+}
+
+body.dark-mode .side-menu-panel li:hover {
+    background-color: var(--surface-secondary) !important;
+}
+
+
+/* ---------------------------------------------------------
+   SIDE MENU BACKDROP
+   --------------------------------------------------------- */
+
+body.dark-mode .side-menu-backdrop {
+    background-color: rgba(0, 0, 0, 0.65) !important;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
+
+body.dark-mode footer {
+    background-color: var(--footer-bg) !important;
+    color: var(--text-main) !important;
+    border-top-color: var(--border-color) !important;
+}
+
+body.dark-mode footer nav {
+    background-color: var(--footer-bg) !important;
+}
+
+body.dark-mode footer a {
+    color: var(--text-secondary) !important;
+}
+
+body.dark-mode footer a:hover {
+    color: var(--text-main) !important;
+}
+
+
+/* ---------------------------------------------------------
+   MENU HEADER ICONS
+   --------------------------------------------------------- */
+
+body.dark-mode .main-header .toggle-menu img,
+body.dark-mode .main-header .notification img,
+body.dark-mode .main-header .profile-pict img {
+    /* Only invert dark icons */
+    filter: brightness(0) invert(1);
+}
+
+
+/* ---------------------------------------------------------
+   GENERAL MENU TEXT
+   --------------------------------------------------------- */
+
+body.dark-mode .all-item-header *,
+body.dark-mode .food_item_content * {
+    border-color: var(--border-color);
+}
+
+
+/* ---------------------------------------------------------
+   PREVENT WHITE BACKGROUNDS FROM menu.css
+   --------------------------------------------------------- */
+
+body.dark-mode .menu,
+body.dark-mode .menu-container,
+body.dark-mode .menu-content,
+body.dark-mode .menu-section {
+    background-color: var(--app-bg) !important;
+    color: var(--text-main) !important;
+}
+
+
+
+
+/* =========================================================
+   SMARTFOOD HEADER — DARK MODE
+   Handles header background, text and header icons
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   HEADER BACKGROUND
+   --------------------------------------------------------- */
+
+body.dark-mode .main-header {
+    background-color: #15181d !important;
+    color: #f5f5f5 !important;
+
+    border-bottom: 1px solid #30353e !important;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.30) !important;
+}
+
+
+/* ---------------------------------------------------------
+   SMARTFOOD / HEADER TITLE
+   --------------------------------------------------------- */
+
+body.dark-mode .main-header .smart-food,
+body.dark-mode .main-header .smart-food h3 {
+    color: #f5f5f5 !important;
+}
+
+
+/* ---------------------------------------------------------
+   TOGGLE MENU
+   --------------------------------------------------------- */
+
+body.dark-mode .main-header .toggle-menu {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+}
+
+
+/* Menu icon */
+
+body.dark-mode .main-header .toggle-menu img {
+    filter: brightness(0) invert(1) !important;
+}
+
+
+/* ---------------------------------------------------------
+   NOTIFICATION
+   --------------------------------------------------------- */
+
+body.dark-mode .main-header .notification {
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+
+
+/* Notification icon */
+
+body.dark-mode .main-header .notification img {
+    filter: brightness(0) invert(1) !important;
+}
+
+
+/* ---------------------------------------------------------
+   PROFILE PICTURE / PROFILE ICON
+   --------------------------------------------------------- */
+
+body.dark-mode .main-header .profile-pict {
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+
+
+/* Profile icon */
+
+body.dark-mode .main-header .profile-pict img {
+    filter: brightness(0) invert(1) !important;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER LINKS
+   --------------------------------------------------------- */
+
+body.dark-mode .main-header a {
+    color: #ffffff !important;
+    background-color: transparent !important;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER BUTTON
+   --------------------------------------------------------- */
+
+body.dark-mode .main-header button {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER ICON HOVER
+   --------------------------------------------------------- */
+
+body.dark-mode .main-header .toggle-menu:hover,
+body.dark-mode .main-header .notification:hover,
+body.dark-mode .main-header .profile-pict:hover {
+    background-color: #20242c !important;
+    border-radius: 50%;
+}
