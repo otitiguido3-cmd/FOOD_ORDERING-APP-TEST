@@ -1069,13 +1069,13 @@ body.dark-mode .menu-section {
 
 /* =========================================================
    SMARTFOOD HEADER — DARK MODE
-   Handles header background, text and header icons
+   Professional header styling
    ========================================================= */
 
 
-/* ---------------------------------------------------------
-   HEADER BACKGROUND
-   --------------------------------------------------------- */
+/* =========================================================
+   1. HEADER BACKGROUND
+   ========================================================= */
 
 body.dark-mode .main-header {
     background-color: #15181d !important;
@@ -1087,96 +1087,247 @@ body.dark-mode .main-header {
 }
 
 
-/* ---------------------------------------------------------
-   SMARTFOOD / HEADER TITLE
-   --------------------------------------------------------- */
+/* =========================================================
+   2. SMART FOOD TITLE
+   ========================================================= */
 
-body.dark-mode .main-header .smart-food,
+body.dark-mode .main-header .smart-food {
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+
 body.dark-mode .main-header .smart-food h3 {
-    color: #f5f5f5 !important;
+    color: #ffffff !important;
 }
 
 
-/* ---------------------------------------------------------
-   TOGGLE MENU
-   --------------------------------------------------------- */
+/* =========================================================
+   3. TOGGLE MENU
+   ========================================================= */
 
 body.dark-mode .main-header .toggle-menu {
-    background-color: transparent !important;
-    color: #ffffff !important;
-    border-color: transparent !important;
+    background-color: #ffffff !important;
+    border: none !important;
+    color: #111111 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 10px !important;
 }
 
 
-/* Menu icon */
+/* IMPORTANT:
+   Do NOT invert the image.
+*/
 
 body.dark-mode .main-header .toggle-menu img {
-    filter: brightness(0) invert(1) !important;
+    filter: none !important;
+
+    background-color: transparent !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    display: block !important;
 }
 
 
-/* ---------------------------------------------------------
-   NOTIFICATION
-   --------------------------------------------------------- */
+/* =========================================================
+   4. NOTIFICATION ICON
+   ========================================================= */
 
 body.dark-mode .main-header .notification {
-    background-color: transparent !important;
-    color: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111111 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 10px !important;
 }
 
 
-/* Notification icon */
+/* Notification image */
 
 body.dark-mode .main-header .notification img {
-    filter: brightness(0) invert(1) !important;
+    filter: none !important;
+
+    background-color: transparent !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    display: block !important;
 }
 
 
-/* ---------------------------------------------------------
-   PROFILE PICTURE / PROFILE ICON
-   --------------------------------------------------------- */
+/* Notification link */
+
+body.dark-mode .main-header .notification a {
+    background-color: transparent !important;
+    color: #111111 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+/* =========================================================
+   5. PROFILE ICON
+   ========================================================= */
 
 body.dark-mode .main-header .profile-pict {
-    background-color: transparent !important;
-    color: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111111 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 10px !important;
 }
 
 
-/* Profile icon */
+/* Profile image */
 
 body.dark-mode .main-header .profile-pict img {
-    filter: brightness(0) invert(1) !important;
+    filter: none !important;
+
+    background-color: transparent !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    display: block !important;
 }
 
 
-/* ---------------------------------------------------------
-   HEADER LINKS
-   --------------------------------------------------------- */
+/* Profile link */
+
+body.dark-mode .main-header .profile-pict a {
+    background-color: transparent !important;
+    color: #111111 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+/* =========================================================
+   6. ALL HEADER LINKS
+   ========================================================= */
 
 body.dark-mode .main-header a {
-    color: #ffffff !important;
+    color: #111111 !important;
     background-color: transparent !important;
+
+    text-decoration: none !important;
 }
 
 
-/* ---------------------------------------------------------
-   HEADER BUTTON
-   --------------------------------------------------------- */
+/* =========================================================
+   7. HEADER BUTTON
+   ========================================================= */
 
 body.dark-mode .main-header button {
-    background-color: transparent !important;
-    color: #ffffff !important;
-    border-color: transparent !important;
+    background-color: #ffffff !important;
+    color: #111111 !important;
+
+    border: none !important;
+
+    opacity: 1 !important;
 }
 
 
-/* ---------------------------------------------------------
-   HEADER ICON HOVER
-   --------------------------------------------------------- */
+/* =========================================================
+   8. MAKE HEADER IMAGES ALWAYS VISIBLE
+   ========================================================= */
+
+body.dark-mode .main-header img {
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    /* Very important:
+       Do NOT invert your original PNG icons.
+    */
+    filter: none !important;
+}
+
+
+/* =========================================================
+   9. HOVER EFFECT
+   ========================================================= */
 
 body.dark-mode .main-header .toggle-menu:hover,
 body.dark-mode .main-header .notification:hover,
 body.dark-mode .main-header .profile-pict:hover {
-    background-color: #20242c !important;
-    border-radius: 50%;
+    background-color: #f0f0f0 !important;
+
+    transform: translateY(-1px);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* STYLING THE DARK VIEW MORE BUTTON */
+/* =========================================================
+   VIEW-MORE ARROW — DARK MODE
+   ========================================================= */
+
+/* Hide the original image */
+body.dark-mode .account-navigation img.view-more {
+    display: none !important;
+}
+
+
+/* Create a clean white arrow */
+body.dark-mode .account-navigation a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 30px !important;
+    height: 30px !important;
+
+    background: transparent !important;
+    text-decoration: none !important;
+}
+
+
+/* The actual arrow */
+body.dark-mode .account-navigation a::after {
+    content: "›";
+
+    display: block;
+
+    color: #ffffff !important;
+
+    font-family: Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 25px;
+
+    width: 30px;
+    height: 30px;
+
+    text-align: center;
+
+    opacity: 1 !important;
+}
+
+
+/* Slightly brighter/larger when touched */
+body.dark-mode .account-navigation a:hover::after {
+    color: #ffffff !important;
+    transform: translateX(2px);
 }

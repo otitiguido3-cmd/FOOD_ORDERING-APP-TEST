@@ -205,3 +205,203 @@
 
 
 
+/* =========================================================
+   ORDER ITEMS
+   ========================================================= */
+
+.order-content {
+    width: 100%;
+}
+
+
+/* Container holding all ordered food */
+
+.order-items-list {
+    width: 100%;
+    display: none;
+    box-sizing: border-box;
+}
+
+
+/* Individual ordered item */
+
+.order-item-row {
+    width: 100%;
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+    box-sizing: border-box;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 12px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Left side */
+
+.order-item-meta {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+
+/* Food image container */
+
+.order-item-image-box {
+    width: 65px;
+    height: 65px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background-color: #f2f2f2;
+}
+
+
+/* Food image */
+
+.order-item-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Food details */
+
+.order-item-details {
+    min-width: 0;
+}
+
+
+.order-item-details h4 {
+    margin: 0 0 5px 0;
+
+    font-size: 15px;
+
+    color: #222;
+}
+
+
+.order-item-details p {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+/* Item total */
+
+.order-item-total {
+    flex-shrink: 0;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #222;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   EMPTY ORDER
+   ========================================================= */
+
+.order-empty-state {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+.empty-state-content {
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+.empty-order {
+    width: 100px;
+    max-width: 100%;
+}
+
+
+.empty-state-content p {
+    margin-top: 10px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode .order-item-row {
+    background-color: #181c22;
+
+    border-color: #30353e;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+
+body.dark-mode .order-item-image-box {
+    background-color: #252a32;
+}
+
+
+body.dark-mode .order-item-details h4 {
+    color: #f5f5f5;
+}
+
+
+body.dark-mode .order-item-details p {
+    color: #aeb4be;
+}
+
+
+body.dark-mode .order-item-total {
+    color: #ffffff;
+}
+
+
+body.dark-mode .empty-state-content {
+    color: #f5f5f5;
+}
