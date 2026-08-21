@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order</title>
+    <title>Success</title>
     <link rel="stylesheet" href="tray.css">
     <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="success.css">
     <link rel="stylesheet" href="dark_mode.css">
 
 
@@ -18,16 +19,30 @@
            <a href="tray.html"><img src="images/back.png" alt="Back"></a> 
         </div>
         <div class="smart-food">
-            <h3>CONFIRM ORDER</h3>
+            <h3>ODERING</h3>
         </div>
         <div class="notification" aria-label="Notifications">
             <a href="notification.html"><img src="images/notification.png" alt="Notification"></a>
         </div>
        
     </header>
+
+    <!-- BODY CONTENT -->
+     <div class="order-confirmed">
+        <div confirmation-image>
+            <img src="images/delivered.png" alt="Order Confirmed">
+        </div>
+        <div confirmation-content>
+            <h2 class="confitm_mssg">Order Confirmed!</h2>
+            <p class="confitm_mssg">Thank you for your order </p><br>
+            <p class="confitm_mssg">We've received it and will start preparing it shortly</p>
+        </div>
+
+     </div>
     
     <!-- STRUCTURING THE  MAIN CONTENT -->
-    <section class="free-delivery">
+
+    <section class="order-summary">
         <div class="free-delivery-content">
             <div class="deliver-now">
                 <h4>Your Order</h4><br>
@@ -109,8 +124,8 @@
             </div>
 
             <section class="place-order">
-                <a href="success.html"></a><button id="place-order-button" class="checkout" disabled>Place Order</button></a>
-                <a href="success.html" ><img class="checkout-img" src="images/forward.png" alt="Forward"> 
+                <button id="place-order-button" class="checkout" disabled>Place Order</button>
+                <a href="#" ><img class="checkout-img" src="images/forward.png" alt="Forward"> </a>
             </section>
         </div>
     </div>
