@@ -1331,3 +1331,26 @@ body.dark-mode .account-navigation a:hover::after {
     color: #ffffff !important;
     transform: translateX(2px);
 }
+
+
+/* =========================================================
+   DARK MODE BUTTONS
+========================================================= */
+
+body.dark-mode .back_to_home {
+    background: #1c1f24;
+
+    border-color: #353b44;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+body.dark-mode .back_to_home:hover {
+    background: #252a32;
+}
+
+
+body.dark-mode .back_to_home_text {
+    color: #f5f5f5;
+}

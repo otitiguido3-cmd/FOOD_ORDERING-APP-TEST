@@ -1,236 +1,493 @@
-/* STYLING THE EMPTY ORDER CONTENT */
+/* =========================================================
+   ORDER PAGE - EMPTY ORDER
+========================================================= */
+
 .empty-order {
-    width: 60px;
-    margin: 10px 10px;
+    width: 100px;
+    max-width: 100%;
+    margin: 10px auto;
     border: 1px solid #ccc;
     border-radius: 999px;
 }
 
 
-/* STYLING THE SELECTION BOX */
+/* =========================================================
+   SELECTION BOX
+========================================================= */
+
 .selection-box {
+
     display: flex;
+
     flex-direction: row;
+
     margin-left: 10px;
+
     align-items: center;
+
     justify-content: space-around;
+
     gap: 12px;
+
     margin-top: 10px;
+
     padding: 12px 14px;
-    background: linear-gradient(135deg, #fff7e6 0%, #f6d48d 100%);
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7e6 0%,
+            #f6d48d 100%
+        );
+
     border: 1px solid rgba(166, 103, 18, 0.2);
+
     border-radius: 16px;
+
     width: calc(100% - 10px);
+
     min-height: 72px;
-    box-shadow: 0 8px 20px rgba(120, 73, 6, 0.12);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+    box-shadow:
+        0 8px 20px rgba(120, 73, 6, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
 }
+
 
 .selection-box:hover {
+
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(120, 73, 6, 0.18);
-    border-color: rgba(166, 103, 18, 0.35);
+
+    box-shadow:
+        0 12px 24px rgba(120, 73, 6, 0.18);
+
+    border-color:
+        rgba(166, 103, 18, 0.35);
 }
 
-.dine-in, .delivery {
+
+/* =========================================================
+   DINE-IN / DELIVERY
+========================================================= */
+
+.dine-in,
+.delivery {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 4px;
+
     border-radius: 10px;
+
     border: 2px solid rgba(234, 96, 10, 0.2);
+
     background-color: #fff7e6;
 
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
 }
 
-.dine-in p, .delivery p {
+
+.dine-in p,
+.delivery p {
+
     margin: 0;
+
     font-family: 'Poppins', sans-serif;
+
     color: #000;
+
     padding-bottom: 10px;
+
     padding-left: 10px;
+
     padding-right: 10px;
+
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+
     font-size: 14px;
+
     font-weight: 400;
 }
 
-.dine-in h4, .delivery h4 {
+
+.dine-in h4,
+.delivery h4 {
+
     margin: 0;
+
     font-family: 'Poppins', sans-serif;
+
     color: #000;
+
     padding-top: 10px;
+
     padding-left: 10px;
+
     padding-right: 10px;
+
     text-align: left;
 }
 
 
-.table-number-box {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.table-number-box label {
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #000;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-#table-number{
-    width: calc(100% - 20px);
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-left: 10px;
-}
-
-.special-instruction {
-    display: block;
-    background: #fff;
-    border: 1px solid rgba(166, 103, 18, 0.2);
-    border-radius: 16px;
-    width: calc(100% - 10px);
-    min-height: 72px;
-    margin-left: 10px ;
-    box-shadow: 0 8px 20px rgba(120, 73, 6, 0.12);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-#special-instruction-textarea {
-    width: calc(100% - 20px);
-    height: 60px;
-    padding: 8px;
-    border: none;
-    border-radius: 16px;
-    resize: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-style: italic;
-}
-
-
-.place-order {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: calc(100% - 20px);
-    margin: 10px 16px;
-    padding: 14px 16px;
-    background: rgb(18, 231, 64);
-    border: 1px solid rgba(107, 170, 142, 0.25);
-    border-radius: 16px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-}
-
-.estimated-delivery-time {
-    background-color: #f6d48d;
-    padding:    10px 12px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #000;
-    margin-left: 10px;
-    border: 1px solid #f6d48d;
-    border-radius: 8px;
-    width: calc(100% - 20px);
-}
-
-.checkout[disabled],
-.checkout.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    pointer-events: none;
-}
-
 .dine-in.selected,
 .delivery.selected {
+
     border-color: #18b000;
+
     background-color: #fffbe5;
 }
 
-.order-item-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 14px;
-    border: 1px solid rgba(166, 103, 18, 0.15);
-    border-radius: 16px;
-    background: #fff;
-    margin-bottom: 10px;
-}
-
-.order-item-meta {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
-
-.order-item-image {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.order-item-total {
-    font-weight: 700;
-}
-
-.order-items-list {
-    width: 100%;
-    display: block;
-}
-
-.order-empty-state {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 18px 10px;
-}
-
-.order-empty-state img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-}
-
-
 
 /* =========================================================
-   ORDER ITEMS
-   ========================================================= */
+   TABLE NUMBER
+========================================================= */
 
-.order-content {
-    width: 100%;
+.table-number-box {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
 }
 
 
-/* Container holding all ordered food */
+.table-number-box label {
 
-.order-items-list {
-    width: 100%;
-    display: none;
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #000;
+
+    margin-bottom: 5px;
+
+    margin-left: 10px;
+}
+
+
+#table-number {
+
+    width: calc(100% - 20px);
+
+    padding: 8px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    margin-left: 10px;
+
     box-sizing: border-box;
 }
 
 
-/* Individual ordered item */
+/* =========================================================
+   SPECIAL INSTRUCTIONS
+========================================================= */
+
+.special-instruction {
+
+    display: block;
+
+    background: #fff;
+
+    border: 1px solid rgba(166, 103, 18, 0.2);
+
+    border-radius: 16px;
+
+    width: calc(100% - 10px);
+
+    min-height: 72px;
+
+    margin-left: 10px;
+
+    box-shadow:
+        0 8px 20px rgba(120, 73, 6, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+#special-instruction-textarea {
+
+    width: calc(100% - 20px);
+
+    height: 60px;
+
+    padding: 8px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    resize: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ESTIMATED DELIVERY / PREPARATION TIME
+========================================================= */
+
+.estimated-delivery-time {
+
+    background-color: #f6d48d;
+
+    padding: 10px 12px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    color: #000;
+
+    margin-left: 10px;
+
+    border: 1px solid #f6d48d;
+
+    border-radius: 8px;
+
+    width: calc(100% - 20px);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PLACE ORDER SECTION
+========================================================= */
+
+.place-order {
+
+    width: calc(100% - 20px);
+
+    margin: 20px auto;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PLACE ORDER BUTTON
+========================================================= */
+
+.checkout {
+
+    width: 100%;
+
+    min-height: 56px;
+
+    padding: 12px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            135deg,
+            #18b000,
+            #24d65c
+        );
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 16px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 24px rgba(24, 176, 0, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LINKS INSIDE BUTTON
+========================================================= */
+
+.checkout a {
+
+    color: white;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   FORWARD IMAGE
+========================================================= */
+
+.checkout-img {
+
+    width: 24px;
+
+    height: 24px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   ENABLED HOVER
+========================================================= */
+
+.checkout:hover:not(:disabled) {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 28px rgba(24, 176, 0, 0.35);
+}
+
+
+/* =========================================================
+   ENABLED CLICK
+========================================================= */
+
+.checkout:active:not(:disabled) {
+
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+========================================================= */
+
+.checkout:disabled,
+.checkout.disabled {
+
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    background: #a9b5ab;
+
+    box-shadow: none;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   BLOCK LINKS WHEN ORDER BUTTON IS DISABLED
+========================================================= */
+
+.checkout:disabled a,
+.checkout.disabled a,
+.checkout a.order-link-disabled {
+
+    pointer-events: none;
+
+    cursor: not-allowed;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   ENABLED BUTTON
+========================================================= */
+
+.checkout:not(:disabled) {
+
+    opacity: 1;
+
+}
+
+
+/* =========================================================
+   ORDER ITEMS CONTAINER
+========================================================= */
+
+.order-content {
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+.order-items-list {
+
+    width: 100%;
+
+    display: none;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ORDER ITEM
+========================================================= */
 
 .order-item-row {
+
     width: 100%;
+
     min-height: 85px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 10px;
@@ -247,26 +504,37 @@
 
     border-radius: 12px;
 
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 
-/* Left side */
+/* =========================================================
+   ORDER ITEM LEFT SIDE
+========================================================= */
 
 .order-item-meta {
+
     display: flex;
+
     align-items: center;
 
     gap: 10px;
 
     min-width: 0;
+
+    flex: 1;
 }
 
 
-/* Food image container */
+/* =========================================================
+   FOOD IMAGE BOX
+========================================================= */
 
 .order-item-image-box {
+
     width: 65px;
+
     height: 65px;
 
     flex-shrink: 0;
@@ -279,10 +547,14 @@
 }
 
 
-/* Food image */
+/* =========================================================
+   FOOD IMAGE
+========================================================= */
 
 .order-item-image {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -291,14 +563,20 @@
 }
 
 
-/* Food details */
+/* =========================================================
+   FOOD DETAILS
+========================================================= */
 
 .order-item-details {
+
     min-width: 0;
+
+    flex: 1;
 }
 
 
 .order-item-details h4 {
+
     margin: 0 0 5px 0;
 
     font-size: 15px;
@@ -308,6 +586,7 @@
 
 
 .order-item-details p {
+
     margin: 0;
 
     font-size: 12px;
@@ -316,9 +595,24 @@
 }
 
 
-/* Item total */
+.order-item-details span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   ITEM TOTAL
+========================================================= */
 
 .order-item-total {
+
     flex-shrink: 0;
 
     font-size: 14px;
@@ -332,13 +626,16 @@
 
 
 /* =========================================================
-   EMPTY ORDER
-   ========================================================= */
+   EMPTY ORDER STATE
+========================================================= */
 
 .order-empty-state {
+
     width: 100%;
 
     display: flex;
+
+    flex-direction: column;
 
     justify-content: center;
 
@@ -349,19 +646,15 @@
 
 
 .empty-state-content {
+
     text-align: center;
 
     padding: 20px;
 }
 
 
-.empty-order {
-    width: 100px;
-    max-width: 100%;
-}
-
-
 .empty-state-content p {
+
     margin-top: 10px;
 
     font-size: 14px;
@@ -370,9 +663,10 @@
 
 /* =========================================================
    DARK MODE
-   ========================================================= */
+========================================================= */
 
 body.dark-mode .order-item-row {
+
     background-color: #181c22;
 
     border-color: #30353e;
@@ -383,25 +677,89 @@ body.dark-mode .order-item-row {
 
 
 body.dark-mode .order-item-image-box {
+
     background-color: #252a32;
 }
 
 
 body.dark-mode .order-item-details h4 {
+
     color: #f5f5f5;
 }
 
 
 body.dark-mode .order-item-details p {
+
     color: #aeb4be;
 }
 
 
+body.dark-mode .order-item-details span {
+
+    color: #c5cad2;
+}
+
+
 body.dark-mode .order-item-total {
+
     color: #ffffff;
 }
 
 
 body.dark-mode .empty-state-content {
+
     color: #f5f5f5;
+}
+
+
+/* =========================================================
+   DARK MODE - SPECIAL INSTRUCTIONS
+========================================================= */
+
+body.dark-mode .special-instruction {
+
+    background-color: #181c22;
+
+    border-color: #30353e;
+}
+
+
+body.dark-mode #special-instruction-textarea {
+
+    background-color: #181c22;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   DARK MODE - TABLE
+========================================================= */
+
+body.dark-mode .table-number-box label {
+
+    color: #ffffff;
+}
+
+
+body.dark-mode #table-number {
+
+    background-color: #181c22;
+
+    color: #ffffff;
+
+    border-color: #30353e;
+}
+
+
+/* =========================================================
+   DARK MODE - DISABLED PLACE ORDER
+========================================================= */
+
+body.dark-mode .checkout:disabled,
+body.dark-mode .checkout.disabled {
+
+    background: #555b61;
+
+    color: #d5d5d5;
 }

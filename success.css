@@ -442,3 +442,145 @@ body.dark-mode .empty-state-content {
     justify-content: space-between;
     gap: 12px;
 }
+
+
+/* =========================================================
+   SUCCESS PAGE ACTION BUTTONS
+========================================================= */
+
+
+/* Remove default link styling */
+
+a:has(.track_order),
+a:has(.back_to_home) {
+    text-decoration: none;
+    display: block;
+}
+
+
+/* =========================================================
+   TRACK ORDER BUTTON
+========================================================= */
+
+.track_order {
+    width: calc(100% - 32px);
+    margin: 18px auto 12px;
+    padding: 15px 18px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #e85d04, #f48c06);
+
+    border: none;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 20px rgba(232, 93, 4, 0.25);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* Hover effect */
+
+.track_order:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 12px 25px rgba(232, 93, 4, 0.35);
+}
+
+
+/* Click effect */
+
+.track_order:active {
+    transform: scale(0.98);
+}
+
+
+/* Track Order text */
+
+.track_order_text {
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   BACK TO HOME BUTTON
+========================================================= */
+
+.back_to_home {
+    width: calc(100% - 32px);
+    margin: 0 auto 25px;
+    padding: 14px 18px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Hover effect */
+
+.back_to_home:hover {
+    background: #f7f7f7;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Click effect */
+
+.back_to_home:active {
+    transform: scale(0.98);
+}
+
+
+/* Back to Home text */
+
+.back_to_home_text {
+    color: #333333;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+}
